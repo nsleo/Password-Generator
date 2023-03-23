@@ -7,6 +7,8 @@
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
   <script defer src="app.js"></script>
+  <script defer src="https://kit.fontawesome.com/227c1d0653.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
 
@@ -14,14 +16,70 @@
 
   <h1>Password Generator</h1>
   
-  <p>
+  <p class="subtitle">
     Use this to generate a strong password.
   </p>
   
-  <input type="text" name="password" id="password" disabled>
-  <input type="range" name="password-length" id="password-length" value="16" min="4" max="64">
+  
+  <div class="display">
 
-  <button id="copy">Copy Password</button>
+    <div class="wrapper">
+
+      <input type="text" name="password" id="password" disabled>
+
+      <div class="buttons">
+        <button id="copy2">
+          <i class="fa-regular fa-clone"></i>
+        </button>
+        <button id="regen">
+          <i class="fa-solid fa-repeat"></i>
+        </button>
+      </div>
+      
+      
+    </div>
+
+    <div class="indicator">
+      <div class="bar" class="bar" style="width: 90%"></div>
+    </div>
+      
+  </div>
+
+
+    
+  <div id="customizeTitleDiv">
+    <span id="customizeTitle">Customize</span>
+  </div>
+
+  <div class="customize">
+    
+
+    <div class="size">
+      <p>Size: <span id="customSize">16</span></p>
+      <input type="range" name="password-length" id="password-length" value="16" min="4" max="64">
+    </div>
+
+    <div class="actions">
+      <label class="checkbox">
+        <input type="checkbox">
+        <span>Uppercase</span>
+      </label>
+      <label class="checkbox">
+        <input type="checkbox">
+        <span>Numbers</span>
+      </label>
+      <label class="checkbox">
+        <input type="checkbox">
+        <span>Symbols</span>
+      </label>
+    </div>
+
+  </div>
+
+
+  <div id="copyButton">
+    <button id="copy">Copy Password</button>
+  </div>
 
   </div>
 
